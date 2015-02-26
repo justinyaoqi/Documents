@@ -1,0 +1,10 @@
+﻿/*
+[name]黑[/name]
+[iconbgcolor]#333[/iconbgcolor]
+Powered by Discuz! X
+*/
+body{ background:url("body.jpg") no-repeat scroll 0 10px #FFFFFF}
+#nv{ background:none repeat scroll 0 0 #333}
+#nv li.a, #nv li a:hover, #nv li.a:hover, #nv li.hover a, #nv li.hover a:hover{ background:none repeat scroll 0 0 #eee;height:50px; line-height:50px; text-decoration:none;}
+#nv li a:hover, #nv li.hover a, #nv li.a:hover, #nv li.a a{ color:#333333;}
+

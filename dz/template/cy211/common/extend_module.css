@@ -1,0 +1,76 @@
+#wp .wp { width: 980px;}
+/* ----------------------------------- ¶©ÔÄ */
+/** portal::list,home::space **/
+.bm_h .addnew { margin-left: 10px; padding-left: 20px; font-size:14px; color:#06c; background: url({IMGDIR}/addbuddy.gif) no-repeat 0 52%; }
+.bm_h .rss { margin-left: 10px; padding-left: 30px; font-size:14px; background: url({STYLEIMGDIR}/feed.png) no-repeat 5px 50%; }
+/** end **/
+
+/** home::space **/
+.bm_h h3,.xi2, .xi2 a, .xi3 a { color:#FFF;}
+/** end **/
+
+/** misc::ranklist **/
+.bm_h h2,.xi2, .xi2 a, .xi3 a { color:#FFF;}
+/** end **/
+
+/** portal::view **/
+#comment .bm_h { border:0 none;background: none repeat scroll 0% 0% #FFF;}
+#comment .bm_h h3 {font-size:14px;}
+.pren em a { color: #1F90DE;}
+.pren em { font-size:14px;}
+.vw .s { background:#F4F4F4;border:1px solid #EEE;padding:10px;}
+.vw .h { padding-bottom: 0px;border-bottom: 1px solid #FFF;}
+.bm_h .xi2 { color:#FFF;background-color:#1F90DE;height:26px;line-height:28px;padding:0px 10px;margin: 7px 0;}
+#nv_portal .vw .s, #nv_portal .vw .d, #nv_portal .vw .o, #nv_portal .vw .pren { margin-left:0;}
+.bm_c { padding-right:10px;}
+/** end **/
+
+/** portal::list **/
+a.xi2 { color:#336699;}
+/** end **/
+
+
+/** forum::forumdisplay **/
+#autopbn { color:#333;border:0 none;}
+#autopbn:hover { color:#333;background:#F2F2F2;}
+.bml .bm_h h1 a { font-size:14px;}
+/** end **/
+
+/** forum::viewthread **/
+.pgbtn a { color:#333;border:0 none !important;}
+.pgbtn a:hover,.pgbtn a:active { color:#333;background:#F2F2F2;}
+/** end **/
+/* ----------------------------------- Èº×é */
+/** group **/
+h2 { color:#696969;font-size:16px;}
+.bml .bm_h h2,.emp h2 { color:#696969;}
+.bmw .bm_h a { font-size:14px;}
+.bm_c { padding:15px 0;}
+.tbmu { padding: 8px 10px 8px 15px;}
+.bw0 { padding-left:15px;}
+h1.xs2 { color:#696969;font-size:16px;}
+.fl .bm_h, .bm_h,.bmw .bm_h { background:#FFF;border:0 none;border-bottom:3px solid #F6F6F6;padding-left:0;}
+
+/** end **/
+
+
+
+
+/* ----------------------------------- ×ÖÌå */
+
+/** forum **/
+.y a { font-size:12px !important;}
+.fl .bm_h, .bm_h { padding-left:35px;}
+.bmw .bm_h a { font-size:16px; }
+.th { border-top:3px solid #1F90DE;background:#FFF !important;border-bottom:1px solid #F6F6F6 !important;}
+.ttp a, .ttp strong { border: 0 none;background: #FFF;}
+.ttp a:hover { color: #1F90DE;background:#F7F7F7;border:0 none;}
+.ttp .a a { color:#FFF;background:#1F90DE;}
+.bml .bm_h { border-bottom:3px solid #F6F6F6 !important;padding-left:0;}
+.tl th, .tl td { padding: 10px 0px; border-bottom: 1px solid #F6F6F6;}
+.xs2 { color:#666;}
+a.bm_h {
+    background: none repeat scroll 0% 0% #F6F6F6 !important;
+    padding-left: 0px !important;
+}
+/** end **/
