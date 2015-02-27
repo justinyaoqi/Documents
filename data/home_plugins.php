@@ -9,4 +9,5 @@ return array (
   26 => 'newtopic',
   27 => 'tag',
   28 => 'weibo',
+  29 => 'slide',
 );
