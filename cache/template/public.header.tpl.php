@@ -28,7 +28,7 @@
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="<?php echo SITE_URL;?>public/bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL;?>theme/sample/darktooltip.css">
     <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL;?>theme/sample/base.css" /> <?php if(is_file('theme/'.$tstheme.'/style.css')) { ?>
     <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL;?>theme/<?php echo $tstheme;?>/style.css" id="tsTheme" /> <?php } ?> <?php if(is_file('app/'.$app.'/skins/'.$skin.'/style.css')) { ?>
     <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL;?>app/<?php echo $app;?>/skins/<?php echo $skin;?>/style.css"> <?php } ?>
@@ -139,9 +139,7 @@
     </nav>
     <div class="headermidder" style="margin-top: 50px;">
         <div class="container">
-            <div class="jumbotron">
-               
-            </div>
+            
         </div>
     </div>
     <div class="appnav appnavheader">

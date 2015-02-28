@@ -30,12 +30,7 @@
 .mbtr .content{line-height:30px;font-size:14px;}
 
 /*通用*/
-.topictype .on{background:#83BF73;}
-.topictype .on a {
-    display: block;
-    float: left;
-    padding: 0 0 0 3px;
-}
+
 .topictype .on a span {
     color: #FFFFFF;
     display: block;
@@ -152,7 +147,7 @@ a.a_rec_btn {
 
 a.a_rec_btn:link, a.a_rec_btn:visited, a.a_rec_btn:hover, a.a_rec_btn:active {
     background: url("bg_rec_btn.png") no-repeat scroll 0 0 transparent;
-    color: #4F946E;
+    color: #999;
 }
 
 .mr5 {
@@ -537,3 +532,8 @@ a.mini-share:hover {
 .album li .ar h3{margin:0px;font-weight:bold;}
 .album li .ar .info{}
 .album li .ar .time{color:#999999;}
+
+.catetype ul li  a{
+    color: #999;
+    font-size: 12px;
+}

@@ -5,4 +5,5 @@ return array (
   'group' => '赞吧',
   'article' => '新闻',
   'user' => '用户',
+  'feed' => '动态',
 );

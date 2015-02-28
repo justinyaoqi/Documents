@@ -8,6 +8,6 @@ return array(
 'url' => 'http://www.bibizan.cn',
 'email' => 'thinksaas@qq.com',
 'author' => '庆阳红旗软件工程有限公司',
-'author_url' => 'http://www.thinksaas.cn',
+'author_url' => 'http://www.bibizan.cn',
 'isedit'	=> '1',
 );

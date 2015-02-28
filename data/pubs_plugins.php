@@ -8,7 +8,6 @@ return array (
   29 => 'weibo',
   31 => 'footertip',
   32 => 'leftuser',
-  35 => 'navs',
   36 => 'douban',
   37 => 'ueditor',
 );

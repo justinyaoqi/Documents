@@ -27,7 +27,7 @@
     </div>
   </div>
 </div>
-
+<script src="<?php echo SITE_URL;?>public/js/jquery.darktooltip.js" type="text/javascript"></script>
 <?php if(intval($TS_USER['user']['userid'])) { ?>
 <script src="<?php echo SITE_URL;?>public/js/imbox/imbox.js" type="text/javascript"></script>
 <script>

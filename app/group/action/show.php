@@ -86,6 +86,9 @@ if ($strGroup['isaudit'] == '1') {
 		}
 	}
 
+   // echo "<pre>";
+   // print_r($arrTopic);
+   // echo "</pre>";
 	$topicNum = $new['group']->findCount('group_topic', "`groupid`='$groupid' " . $andType);
 
 	$pageUrl = pagination($topicNum, 30, $page, $url);

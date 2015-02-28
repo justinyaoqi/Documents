@@ -12,6 +12,7 @@ function newtopic(){
 	
 			$arrTopic[] = $item;
 			$arrTopic[$key]['title']=tsTitle($item['title']);
+			$arrTopic[$key]['content']=cututf8 ( t(tsDecode ( $item ['content'] )), 0, 120 );
 			$arrTopic[$key]['user'] = aac('user')->getOneUser($item['userid']);
 			$arrTopic[$key]['group'] = aac('group')->getOneGroup($item['groupid']);
 		
@@ -29,5 +30,5 @@ function newtopic_css(){
 
 }
 
-addAction('home_index_left','newtopic');
+addAction('home_index_right','newtopic');
 //addAction('pub_header_top','newtopic_css');

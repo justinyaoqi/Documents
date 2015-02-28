@@ -1,3 +1,4 @@
+
 /*显示隐藏回复*/
 function commentOpen(id,gid)
 {
