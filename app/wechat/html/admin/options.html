@@ -1,0 +1,15 @@
+{php include template("admin/header");}
+<div class="midder">
+	{php include template("admin/menu");}
+	<form  method="POST" action="index.php?app=wechat&ac=admin&mg=options&ts=do">
+		<table>
+			
+			<tr><td>Token：</td><td><textarea style="width:300px;" name="option[appdesc]">{$strOption[appdesc]}</textarea></td></tr>
+			<tr><td>APPid：</td><td><input style="width:300px;" name="option[appkey]" value="{$strOption[appkey]}" /></td></tr>
+			<tr><td>AppSecret:</td><td><input style="width:300px;" name="option[appkey]" value="{$strOption[appkey]}" /></td></tr>
+			<input type="hidden" name="token" value="{$_SESSION['token']}" />
+			<input type="submit" value="确定" /></td></tr>
+		</table>
+	</form>
+</div>
+{php include template("admin/footer");}

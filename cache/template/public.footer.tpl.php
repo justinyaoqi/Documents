@@ -7,7 +7,7 @@
 <a href="<?php echo tsurl('home','info',array('key'=>'about'))?>">关于我们</a> | <a href="<?php echo tsurl('home','info',array('key'=>'contact'))?>">联系我们</a> | <a href="<?php echo tsurl('home','info',array('key'=>'agreement'))?>">用户条款</a> | <a href="<?php echo tsurl('home','info',array('key'=>'privacy'))?>">隐私申明</a>
  | <a href="<?php echo tsurl('home','info',array('key'=>'job'))?>">加入我们</a>
 </p>
-<p>Powered by <a target="_blank" class="softname" title="开源社区" href="<?php echo $TS_CF['info'][url];?>"><?php echo $TS_CF['info'][name];?></a> <?php echo $TS_CF['info'][version];?> & <a target="_blank" href="<?php echo $TS_CF['info'][copyurl];?>" title="<?php echo $TS_CF['info'][copyright];?>">QINIAO INC.</a>  Copyright ©  <?php echo $TS_CF['info'][year];?>   <a target="_blank" href="<?php echo SITE_URL;?>"><?php echo $TS_SITE['base'][site_title];?></a> <?php echo $TS_SITE['base'][site_icp];?></p><p><span style="font-size:0.83em;">Processed in <?php echo $runTime;?> second(s)</span></p></div>
+<p>Powered by <a target="_blank" class="softname" title="比比赞" href="www.bibizan.cn">比比赞</a> <?php echo $TS_CF['info'][version];?> & <a target="_blank" href="<?php echo $TS_CF['info'][copyurl];?>" title="庆阳红旗软件工程有限公司">HONGQI INC.</a>  Copyright ©  <?php echo $TS_CF['info'][year];?>   <a target="_blank" href="<?php echo SITE_URL;?>"><?php echo $TS_SITE['base'][site_title];?></a> <?php echo $TS_SITE['base'][site_icp];?></p></div>
 
 <!--弹出窗口-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

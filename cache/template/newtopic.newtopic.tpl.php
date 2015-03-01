@@ -2,8 +2,8 @@
     <div class="btitle">最新话题</div>
     <ul class ="list-group" style="border:0;">
         <?php foreach((array)$arrTopic as $key=>$item) {?>
-        <li class="list-group-item " style="border:0;">
-            <div class="media">
+        <li class="list-group-item " style="border:0;padding:1px 10px">
+            <div class="media" style="">
                 <div class="media-left">
                     <a href="<?php echo tsurl('user','space',array('id'=>$item['user'][userid]))?>"><img class="img-circle" src="<?php echo $item['user'][face];?>" width="32" height="32" alt="<?php echo $item['user']['username'];?>" title="<?php echo $item['user']['username'];?>" />
                     </a>

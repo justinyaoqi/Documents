@@ -25,5 +25,5 @@ return array (
   'photo_type' => 'jpg,gif,png,jpeg',
   'attach_size' => '2',
   'attach_type' => 'zip,rar,doc,txt,ppt',
-  'logo' => 'logo.gif',
+  'logo' => 'logo.png',
 );
