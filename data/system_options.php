@@ -20,7 +20,7 @@ return array (
   'isallowedit' => '0',
   'timezone' => 'Asia/Hong_Kong',
   'site_theme' => 'sample',
-  'site_urltype' => '2',
+  'site_urltype' => '1',
   'photo_size' => '2',
   'photo_type' => 'jpg,gif,png,jpeg',
   'attach_size' => '2',

@@ -1,35 +1,35 @@
 <?php defined('IN_TS') or die('Access Denied.'); ?><?php include template('header'); ?>
 <script src="public/js/jquery-1.8.0.min.js" type="text/javascript"></script>
 <script>
-$(document).ready(function(){
-	$.getJSON("http://www.thinksaas.cn/index.php?app=notice&ac=new&callback=?", 
-	function(data){
-		$.each(data, function(i,item){
-			$("#admindex_msg table").append("<tr><td width='100'>"+item.time+"</td><td><a href=\""+item.url+"\" target=\"_blank\">"+item.title+"</a></td></tr>");
-		});
-		return false;
-	}); 
+// $(document).ready(function(){
+// 	$.getJSON("http://www.thinksaas.cn/index.php?app=notice&ac=new&callback=?", 
+// 	function(data){
+// 		$.each(data, function(i,item){
+// 			$("#admindex_msg table").append("<tr><td width='100'>"+item.time+"</td><td><a href=\""+item.url+"\" target=\"_blank\">"+item.title+"</a></td></tr>");
+// 		});
+// 		return false;
+// 	}); 
 
-	$.getJSON("http://www.thinksaas.cn/index.php?app=service&ac=auth&ts=isauth&url=<?php echo $theAuthUrl;?>&version=<?php echo $TS_CF['info'][version];?>&callback=?", 
-	function(rs){
+// 	$.getJSON("http://www.thinksaas.cn/index.php?app=service&ac=auth&ts=isauth&url=<?php echo $theAuthUrl;?>&version=<?php echo $TS_CF['info'][version];?>&callback=?", 
+// 	function(rs){
 		
-		if(rs){
-			if(rs.isaudit==1){
-				$("#authurl").html('当前域名已获得商业授权');
-				return false;
-			}else{
-				$("#authurl").html('当前域名未被授权 <a target=\"_blank\" href=\"http://www.thinksaas.cn/service/\">【购买商业授权】</a>');
-				return false;
-			}
-		}else{
+// 		if(rs){
+// 			if(rs.isaudit==1){
+// 				$("#authurl").html('当前域名已获得商业授权');
+// 				return false;
+// 			}else{
+// 				$("#authurl").html('当前域名未被授权 <a target=\"_blank\" href=\"http://www.thinksaas.cn/service/\">【购买商业授权】</a>');
+// 				return false;
+// 			}
+// 		}else{
 			
-			$("#authurl").html('当前域名未被授权 <a target=\"_blank\" href=\"http://www.thinksaas.cn/service/\">【购买商业授权】</a>');
-			return false;
-		}
-	});
+// 			$("#authurl").html('当前域名未被授权 <a target=\"_blank\" href=\"http://www.thinksaas.cn/service/\">【购买商业授权】</a>');
+// 			return false;
+// 		}
+// 	});
 	
-});
-</script>
+// });
+// </script>
 
 <style>
 .fbox{float:left;width:45%;margin-right:10px;}
