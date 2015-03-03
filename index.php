@@ -16,7 +16,7 @@ define('THINKINSTALL', THINKROOT . '/install');
 define('THINKPLUGIN', THINKROOT . '/plugins');
 
 // 装载ThinkSAAS核心
-error_reporting(E_ALL ^ E_DEPRECATED);
+//error_reporting(E_ALL ^ E_DEPRECATED);
 include 'thinksaas/thinksaas.php';
 
 unset($GLOBALS);

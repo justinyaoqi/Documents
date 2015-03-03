@@ -44,6 +44,7 @@ date_default_timezone_set($TS_SITE['base']['timezone']);
 	} else {
 		$site_theme = $TS_SITE['base']['site_theme'];
 	}
+//echo $app;
 
 	//加载APP配置缓存文件
 	if ($app != 'system') {
@@ -59,7 +60,7 @@ date_default_timezone_set($TS_SITE['base']['timezone']);
 			}
 		}
 	}
-
+//echo $app;
 	//控制前台ADMIN访问权限
 	if ($ac == 'admin' && $TS_USER['admin']['isadmin'] != 1 && $app != 'system') {
 		header("Location: " . SITE_URL);
@@ -185,6 +186,10 @@ if (is_file('app/' . $app . '/' . $app . 'Action.php')) {
 	$runTime = $time_end - $time_start;
 	$runTime = number_format($runTime, 6);
 
+
+
+//echo $ac;
+//exit();
 	include 'app/' . $app . '/action/' . $ac . '.php';
 
 	//打印出每个页面的SQL，用于分析和优化SQL语句（规划中）

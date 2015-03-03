@@ -6,4 +6,5 @@ return array (
   'article' => '新闻',
   'user' => '用户',
   'feed' => '动态',
+  'wechat' => '微信平台',
 );
