@@ -5,4 +5,5 @@ return array (
   1 => 'gotop',
   2 => 'ueditor',
   3 => 'douban',
+  4 =>'wechatlogin',
 );
