@@ -1,5 +1,5 @@
 <?php defined('IN_TS') or die('Access Denied.'); ?><!--幻灯片-->
-<div class="bbox">
+<div class="bbox 192.168.0.113">
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->

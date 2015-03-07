@@ -14,6 +14,13 @@ ol, ul, li {
     margin: 0;
     padding: 0
 }
+p{
+    text-indent:em;
+    font-size: 16px;
+    font-family: sans-serif, 宋体;
+    line-height: 28px;
+    text-justify:inter-ideograph;
+}
 
 .btn-fat {
     padding-left: 30px;

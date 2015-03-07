@@ -7,22 +7,34 @@ foreach($ret as $item){
 			$strOption['token'] = stripslashes($item['token']);
 			$strOption['appid'] = stripslashes($item['appid']);
 			$strOption['appsecret'] = stripslashes($item['appsecret']);
-			$strOption['access_token'] = stripslashes($item['access_token']);
+			$strOption['encodingaeskey'] = stripslashes($item['encodingaeskey']);
 		}
 
 $appid=$strOption['appid'];
-$secret=$strOption['secret'];
-$access_token=get_access_token();
+$appsecret=$strOption['appsecret'];
+$token=$strOption['token'];
+$encodingaeskey=$strOption['encodingaeskey'];
+$access_token=get_access_token($appid,$appsecret);
 
 define('ACCESS_TOKEN', $access_token);
 var_dump(ACCESS_TOKEN);
+
+$options = array(
+    'token'=>$token, //填写你设定的key
+    'encodingaeskey'=>$encodingaeskey, //填写加密用的EncodingAESKey
+    'appid'=>$appid, //填写高级调用功能的app id, 请在微信开发模式后台查询
+    'appsecret'=>$appsecret ,//填写高级调用功能的密钥
+    );
+ $weObj = new Wechat($options); 
+var_dump($weObj);
+
 switch ($ts) {
 	case '':
 		include template("admin/wechatmenu");
 		break;
 	
 	case 'edit1':
-		# code...
+		var_dump($_POST);
 		break;
 	default:
 		# code...

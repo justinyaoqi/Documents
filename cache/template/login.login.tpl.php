@@ -1,6 +1,6 @@
 <?php defined('IN_TS') or die('Access Denied.'); ?><?php if($TS_USER['user']['userid']) { ?>
 
-<div class="facebox bbox">
+<div class="facebox bbox hidden-xs">
 <div class="bc">
 <div class="face">
 <a href="<?php echo tsurl('user','space',array('id'=>$strUser['userid']))?>"><img class="img-circle" title="<?php echo $strUser['username'];?>" alt="<?php echo $strUser['username'];?>" src="<?php echo $strUser['face'];?>" width="48"></a>

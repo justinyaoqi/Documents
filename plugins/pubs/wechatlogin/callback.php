@@ -1,23 +1,39 @@
 <?php 
 defined('IN_TS') or die('Access Denied.');
-//获取的微信登陆appid
-$wlarr=fileRead('config.php');
-$appid=$wlarr['appid'];
-$appSecret=$wlarr['appSecret'];
-$code=';';  //远程获取的code
-function wl_get_access_token(,$appid,$appSecret,$code)
+include './config.php';
+$arrchatlogin = require('config.php');
+$wxappid=$arrchatlogin['wxappid'];
+$wxappSecret=$arrchatlogin['wxappSecret']
+
+
+//获取code和state
+if ($_GET['code'] && $_GET['state'])_ {
+	$code=trim($_GET['code']);
+	$state=trim($_GET['state']);
+}
+
+//获取access
+$datas=wx_get_access_token($wxappid,$wxappSecret,$code);
+$access_token=$datas['access_token'];
+$openid=$datas['openid'];
+
+function wl_get_access_token($appid,$appSecret,$code)
 {
-	$url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".$appid."&secret=".$appSecret."&code=".$code."&grant_type=authorization_code";
+	$url="https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$appid.'&secret='.$wxappSecret.'&code='.$code.'&grant_type=authorization_code";
 	$json=http_request_json($url);
 	$data=json_decode($json,true);
 	if ($data['access_token']) {
-		return $data['access_token'];
+		return $data;
 	}else{
 		return '获取access_token失败';
 	}
 }
 
-
+//返回用户信息
+$urluserinfo="https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'";
+$userinfodata=http_get_request_json($urluserinfo)
+var_dump($userinfodata);
+exit();
 function http_request_json($url){    
    $ch = curl_init();  
    curl_setopt($ch, CURLOPT_URL,$url);  

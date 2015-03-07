@@ -1,4 +1,4 @@
-<?php defined('IN_TS') or die('Access Denied.'); ?><div class="bbox">
+<?php defined('IN_TS') or die('Access Denied.'); ?><div class="bbox hidden-xs">
     <div class="btitle">最新话题</div>
     <ul class ="list-group" style="border:0;">
         <?php foreach((array)$arrTopic as $key=>$item) {?>

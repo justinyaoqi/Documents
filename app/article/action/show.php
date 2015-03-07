@@ -22,7 +22,7 @@ if ($strArticle ['isaudit'] == 1) {
 
 $strArticle['title'] = tsTitle($strArticle['title']);
 $strArticle['content'] = tsDecode($strArticle['content']);
-
+$strArticle['contentbefore']=cututf8 ( t(tsDecode ( $strArticle ['content'] )), 0, 180 );
 $strArticle ['tags'] = aac ( 'tag' )->getObjTagByObjid ( 'article', 'articleid', $articleid );
 $strArticle ['user'] = aac ( 'user' )->getOneUser ( $strArticle ['userid'] );
 $strArticle ['cate'] = $new ['article']->find ( 'article_cate', array (

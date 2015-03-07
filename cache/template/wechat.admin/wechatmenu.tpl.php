@@ -1,6 +1,6 @@
-{php include template("admin/header");}
+<?php defined('IN_TS') or die('Access Denied.'); ?><?php include template("admin/header");?>
 <div class="midder">
-	{php include template("admin/menu");}
+	<?php include template("admin/menu");?>
 	<div class="container">
 		<div class="row">
 			
@@ -278,4 +278,4 @@
 		</div>
 	</div>
 </div>
-{php include template("admin/footer");}
+<?php include template("admin/footer");?>
