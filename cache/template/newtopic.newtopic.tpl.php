@@ -19,7 +19,7 @@
                         <div><a href="<?php echo tsurl('user','space',array('id'=>$item['userid']))?>"><?php echo $item['user'][username];?></a></div>
                     </div>
                     <div>
-                        <p>111<?php echo $item['content'];?></p>
+                        <p style="font-size:14px;line-height:18px;">111<?php echo $item['content'];?></p>
                     </div>
                     <div class="topic_info">
                         <span>

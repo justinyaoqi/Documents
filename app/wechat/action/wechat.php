@@ -3364,34 +3364,3 @@ class ErrorCode
         };
     }
 }
-class wechat extends tsApp {
-
-    //构造函数
-    public function __construct($db) {
-
-        include 'config.php';
-        //判断APP是否采用独立数据库
-        if ($tsAppDb) {
-            include 'sql/' . $tsAppDb['sql'] . '.php';
-            $db = new MySql($tsAppDb);
-        }
-
-        parent::__construct($db);
-    }
-    //获取微信配置内容
-    public function GetWechatsConfig()
-    {
-    	# code...
-    
-    $arrWechats = $this->findAll('article', $arr, 'token,appid,appsecret,access_token', 10);
-        foreach ($arrWechats as $key => $item) {
-            $arrWechats[$key]['token'] = $item['token'];
-            $arrWechats[$key]['appid'] = $item['appid'];
-             $arrWechats[$key]['appsecret'] = $item['appsecret'];
-              $arrWechats[$key]['access_token'] = $item['access_token'];
-        }
-
-        return $arrWechats;
-    //增加微信配置内容
-        }
-}

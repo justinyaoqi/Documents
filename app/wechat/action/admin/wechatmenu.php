@@ -40,6 +40,36 @@ switch ($ts) {
 		# code...
 		break;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //获取accesstoken
 function get_access_token($appid,$secret){  
 	$url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$secret;  
