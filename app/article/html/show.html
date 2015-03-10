@@ -113,7 +113,7 @@
     </div>
 </div>
 <div class="col-md-4">
-    <div class="bbox">
+    <div class="bbox hidden-xs">
         <div class="btitle">文章分类</div>
         <div class="bc">
             <ul class="nav nav-pills nav-stacked" role="tablist">

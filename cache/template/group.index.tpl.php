@@ -43,7 +43,7 @@
                 <div class="media-body">
                     <h5 style="padding:0;float:right;"><a href="<?php echo tsurl('group','show',array('id'=>$item['groupid']))?>"><?php echo $item['group']['groupname'];?></a></h5>
                     <h5 class="media-heading" style="color:#005B97"><a href="<?php echo tsurl('group','topic',array('id'=>$item['topicid']))?>" target="_blank"><strong><?php echo $item['title'];?></strong></a><span class="glyphicon glyphicon-eye-open" style="font-size: 12px;margin-left: 10px;"></span><span><?php echo $item['count_view'];?></span></h5>
-                    <div class="userdesc"><span style=""><a id="def-html-<?php echo $item['user']['userid'];?><?php echo $key;?>" style="font-color:black;" data-tooltip="#html-content" href="<?php echo tsurl('group', 'topic', array('id' => $item['topicid']))?>">
+                    <div class="userdesc"><span style=""><a id="def-html-<?php echo $item['user']['userid'];?><?php echo $key;?>"  data-tooltip="#html-content" style="color:#777;font-size:12px;" href="<?php echo tsurl('group', 'topic', array('id' => $item['topicid']))?>">
                         <?php echo $item['user']['username'];?>,<?php echo $item['user']['about'];?>
                     </a>
                     <div id = "html-content" class="light" style="display:none;background:white;">
@@ -65,7 +65,7 @@
                             <button class="btn btn-primary btn-sm">关注</button>
                         </div>
                     </div></span></div>
-                    <p style="line-height: 24px;color:#666;font-size: 13px;padding: 4px"><?php echo $item['content'];?></p>
+                    <p style="line-height: 24px;color:#222;font-size: 13px;padding: 4px"><?php echo $item['content'];?></p>
                 </div>
                 <div style="font-size: 12px;color:#666;line-height:12px;">
                     <span style="margin-left:50px;" class="label label-success"><?php echo $item['tag'][0]['tagname'];?></span>

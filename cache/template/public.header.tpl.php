@@ -61,7 +61,7 @@
     <?php doAction('pub_header_top')?>
 </head>
 
-<body>
+<body style="background:#FFFFFF">
 
     <nav class="navbar navbar-blue header navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container">
