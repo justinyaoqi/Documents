@@ -1,19 +1,8 @@
 {template header}
 
 <div class="container">
-
-    <ol class="breadcrumb">
-        <li><a href="{SITE_URL}">首页</a>
-        </li>
-        <li class="active">新闻</li>
-    </ol>
-
     <div class="row">
-
-
-
         <div class="col-md-8">
-
             <div class="bbox">
                 <div class="btitle">最新新闻</div>
                 <div class="bc">
@@ -47,36 +36,11 @@
 
 
         </div>
-
-
-
         <div class="col-md-4 hidden-xs" >
 
             <a class="btn btn-info btn-block btn-lg" href="{tsUrl('article','add')}">
                 <span class="glyphicon glyphicon-plus-sign"></span> 写文章</a>
             <p></p>
-
-
-            <div class="bbox">
-                <div class="btitle">文章分类</div>
-
-                <div class="bc">
-
-                    <ul class="nav nav-pills nav-stacked" role="tablist">
-                        {loop $arrCate $key $item}
-                        <li role="presentation" {if $ac=='cate' && $cateid==$item[ 'cateid']}class="active" {/if}><a href="{tsUrl('article','cate',array('id'=>$item['cateid']))}">{$item['catename']}</a>
-                        </li>
-                        {/loop}
-                        <li role="presentation" {if $ac=='tags' }class="active" {/if}><a href="{tsUrl('article','tags')}">标签</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
             <div class="bbox">
                 <div class="btitle">推荐阅读</div>
                 <div class="bc">

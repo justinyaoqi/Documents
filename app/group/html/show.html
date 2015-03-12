@@ -15,7 +15,7 @@
                 <div class="face"><img title="{$strGroup[groupname]}" alt="{$strGroup[groupname]}" src="{$strGroup[photo]}" width="48" />
                 </div>
                 <div class="title">
-                    <h1>{$strGroup[groupname]}</h1>
+                    <h3>{$strGroup[groupname]}</h3>
                     <p><a href="{tsUrl('group','show',array('id'=>$strGroup['groupid']))}">{$strGroup['count_topic']}</a> 帖子 | <a href="{tsUrl('group','user',array('id'=>$strGroup['groupid']))}">{$strGroup['count_user']}</a> 成员</p>
                 </div>
                 <div class="join">
@@ -32,7 +32,7 @@
                 创建于 {php echo date('Y-m-d',$strGroup[addtime])} 组长：
                 <a href="{tsUrl('user','space',array('id'=>$strLeader[userid]))}" rel="face" uid="{$strLeader['userid']}">{$strLeader[username]}</a>
             </p>
-            <p>{$strGroup[groupdesc]}</p>
+            <div class="bg-danger">{$strGroup[groupdesc]}</div>
             {if $strGroup ['tags']}
             <div class="tags">
                 {loop $strGroup['tags'] $key $item}
@@ -58,8 +58,7 @@
         </div>
         <div class="clear"></div>
         <div class="topic_list">
-
-       
+            
             <ul>
                 {loop $arrTopic $key $item}
                 <li>
@@ -107,13 +106,19 @@
                         </div>
                         <div class="topic_info">
                             <p>{$item['content']}</p>
-                            <span style="float:left;">
-                                {php echo getTime($item[uptime],time())}
-                            </span>
-                            <span style="float:right;">
-                                <a href="{tsUrl('user','space',array('id'=>$item[userid]))}"  rel="face" uid="{$item['user']['userid']}">{$item[user][username]}</a>
-                                {if $item[count_comment]>0}<a class="rank" style="color:#FFFFFF;" href="{tsUrl('group','topic',array('id'=>$item[topicid]))}">{$item[count_comment]}</a>{/if}
-                            </span>
+                            <div>
+                                <span style="float:left;">
+                                    {php echo getTime($item[uptime],time())}
+                                </span>
+                                <span>&nbsp;</span>
+                                <span>&nbsp;</span>
+                                <span><i class="icon-comment-alt"></i><a href="">添加评论</a></span>
+                                <span style="float:right;">
+                                    <a href="{tsUrl('user','space',array('id'=>$item[userid]))}"  rel="face" uid="{$item['user']['userid']}">{$item[user][username]}</a>
+                                    {if $item[count_comment]>0}<a class="rank" style="color:#FFFFFF;" href="{tsUrl('group','topic',array('id'=>$item[topicid]))}">{$item[count_comment]}</a>{/if}
+                                </span>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="clear"></div>

@@ -10,12 +10,31 @@ $wxappSecret=$arrchatlogin['wxappSecret']
 if ($_GET['code'] && $_GET['state'])_ {
 	$code=trim($_GET['code']);
 	$state=trim($_GET['state']);
+
+
+}else{
+	header("Location:http://www.bibizan.cn/index.php/user/login")
 }
 
 //获取access
 $datas=wx_get_access_token($wxappid,$wxappSecret,$code);
 $access_token=$datas['access_token'];
 $openid=$datas['openid'];
+
+
+if ($access_token) {
+	$userinfos=get_user_info($access_token,$openid);
+	//查询用户信息，返回session
+
+
+
+}elseif {
+	echo "获取access_token失败";
+}
+//返回用户信息
+
+$openid=$userinfodata['openid'];
+
 
 function wl_get_access_token($appid,$appSecret,$code)
 {
@@ -25,15 +44,25 @@ function wl_get_access_token($appid,$appSecret,$code)
 	if ($data['access_token']) {
 		return $data;
 	}else{
-		return '获取access_token失败';
+		return '';
 	}
 }
+//获取微信用户信息
+function get_user_info($access_token,$openid)
+{
+	$url="https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid=',$openid.'";
+	$json=http_request_json($url);
+	$data=json_decode($json,true);
+	
+	return $data;
+}
+function get_local_userinfo($id)
+{
+	
+}
 
-//返回用户信息
-$urluserinfo="https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'";
-$userinfodata=http_get_request_json($urluserinfo)
-var_dump($userinfodata);
-exit();
+
+
 function http_request_json($url){    
    $ch = curl_init();  
    curl_setopt($ch, CURLOPT_URL,$url);  

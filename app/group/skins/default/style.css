@@ -3,8 +3,9 @@
 .group_show .face{float:left;}
 .group_show .face img{}
 .group_show .title{float:left;margin-left:20px;}
-.group_show .title h1{margin:0;padding:0;}
-.group_show .title p{color:#999;}
+.group_show .title h3{margin:0;padding:0;}
+.group_show .title p{
+    color:#999;}
 .group_show .join{float:left;margin-left:20px;color:#999;}
 /*最新CSS*/
 .mbtl {

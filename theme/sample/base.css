@@ -22,10 +22,11 @@ p{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 28px;
     text-justify:inter-ideograph;
+    color: #222;
 }
 
 a{
-    color: #222;
+    color:rgba(34, 85, 152, 1);
     text-decoration: none;
 }
 .btn-fat {
@@ -112,7 +113,7 @@ a{
     padding: 0 0px;
     height: 45px;
     line-height: 45px;
-    background: #CC0033;
+    background: #159B48;
 }
 .appnav .select {
     background: rgba(42, 44, 49, 1);
@@ -435,6 +436,9 @@ a{
     
     overflow: hidden;
     clear: both
+}
+.bbox .bc p{
+    font-size: 13px;
 }
 .rbox {
     float: right;
@@ -906,10 +910,9 @@ a{
     padding: 10px;
 }
 /**/
-
-.clist {} .clist ul {} .clist ul li {
+.clist ul li {
     border-bottom: 1px dashed #cccccc;
-    padding: 10px 0
+    border-right: 1px solid red;
 }
 .clist ul li img {
     margin: 0px 20px 0 0;

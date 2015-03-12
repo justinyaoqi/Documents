@@ -6,4 +6,5 @@ return array (
   3 => 'douban',
   4 => 'wechatlogin',
   5 => 'ueditor',
+  6 => 'gobad',
 );

@@ -1,10 +1,8 @@
 {template header}
+<div style="height:10px;" class="clear">
+    
+</div>
 <div class="container">
-    <ol class="breadcrumb">
-        <li><a href="{SITE_URL}">首页</a>
-    </li>
-    <li class="active">小组</li>
-</ol>
 <div class="row">
     <div class="col-lg-3 hidden-xs ">
         <div class="bbox">
@@ -13,12 +11,12 @@
                     {loop $arrCatess $key $item}
                     <li style="height: 90px;padding: 4px;border-bottom: solid 1px silver;overflow: hidden;">
                         <div style="clear:both; font-size: 16px; ">
-                            <span class="glyphicon glyphicon-search" style="margin-left: 20px;font-size:12px;"></span><span style="margin-left: 10px;"><a href="">{$item['catename']}</a></span>
+                            <span class="glyphicon glyphicon-search" style="margin-left: 20px;font-size:12px;"></span><span style="margin-left: 10px;"><a href="{tsUrl('group','allcate',array('cateid'=>$item['cateid']))}">{$item['catename']}</a></span>
                         </div>
                         <div style="clear: both;font-size: 14px;padding: 5px 20px;" class="">
                             <ul style="">
                                 {loop $item['two'] $tkey $titem}
-                                <li style="float: left;text-align: center;line-height: 24px;padding: 2px;"><a title="{$titem['catename']}" href="">{$titem['catename']}</a>
+                                <li style="float: left;text-align: center;line-height: 24px;padding: 2px;"><a title="{$titem['catename']}" href="{tsUrl('group','allcate',array('cateid'=>$item['cateid']))}">{$titem['catename']}</a>
                             </li>
                             {/loop}
                         </ul>
