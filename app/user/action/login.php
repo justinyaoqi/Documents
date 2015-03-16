@@ -30,6 +30,8 @@ switch($ts){
 		
 		$jump = trim($_POST['jump']);
 		
+
+
 		$email = trim($_POST['email']);
 		
 		$pwd = trim($_POST['pwd']);
@@ -113,6 +115,55 @@ switch($ts){
 		break;
 	
 	//退出	
+	case 'ido':
+		$email = trim($_POST['email']);
+		
+		$pwd = trim($_POST['pwd']);
+
+		//$isEmail = $new['user']->findCount('user',array(
+		//	'email'=>$email,
+		//));
+		
+		$strUser = $new['user']->find('user',array(
+			'email'=>$email,
+		));
+
+		//此处预留其他登录接口
+		
+		if(md5($strUser['salt'].$pwd)!==$strUser['pwd']) {
+			getiJson("您还没有注册或者密码错误",$error=1);
+		}else{
+			//用户信息
+		$userData = $new['user']->find('user_info',array(
+			'email'=>$email,
+		));
+
+		//用户userid
+		$userid = $userData['userid'];
+		
+		//一天之内登录只算一次积分
+		if($userData['uptime'] < strtotime(date('Y-m-d'))){
+			//对积分进行处理
+			aac('user')->doScore($app,$ac,$ts);
+		}
+		
+		//更新登录时间，用作自动登录
+		$autologin = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
+		$new['user']->update('user_info',array(
+			'userid'=>$userid,
+		),array(
+			'ip'=>getIp(),  //更新登录ip
+			'autologin'=>$autologin,
+			'uptime'=>time(),   //更新登录时间
+		));
+		var_dump( getiJson($userData,$error=0));
+
+
+		}
+		
+		
+		
+		break;
 	case "out":
 		aac('user')->logout();
 		header('Location: '.tsUrl('user','login'));

@@ -1949,6 +1949,14 @@ function getJson($data, $js = 1, $status = 0, $url = '') {
 }
 
 /*
+ * @data 返回的数据或者提示语
+ * @error 0没有错误，1有错误
+ */
+function getiJson($data,  $error= 0) {
+	echo json_encode(array('datas'=>array('error'=>$error,'data'=>$data)));
+}
+
+/*
  * 为项目上传绝对路径的图片
  * @photourl  图片绝对路径http
  * @projectid  项目ID
