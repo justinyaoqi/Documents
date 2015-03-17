@@ -1,6 +1,9 @@
 <?php
 defined('IN_TS') or die('Access Denied.');
+//var_dump($_GET);
+//	exit();
 switch($ts){
+
 	case "":
 		include 'userinfo.php';
 		
@@ -28,13 +31,23 @@ switch($ts){
 		include template("follow");
 	
 		break;
+	case 'count':
+		$userid = intval(trim($_GET['id']));
+		$arrUsers = $new['user']->findAll('user_follow',array(
+			'userid'=>$userid),'addtime desc',null);
+		if(is_array($arrUsers)){
+			foreach($arrUsers as $item){
+				$arrUser[] =  $new['user']->getOneUser($item['userid_follow']);
+			}
+		}
+		getiJson($arrUser);
+		break;
 		
 	//关注执行 
 	case "do":
 	
 		$userid = intval($TS_USER['user']['userid']);
 		$userid_follow = intval($_GET['userid']);
-		
 		if($_GET['token'] != $_SESSION['token']) {
 			echo json_encode(array(
 				'status'=>0,

@@ -116,6 +116,8 @@ switch($ts){
 	
 	//退出	
 	case 'ido':
+		//echo "string";
+		//exit();
 		$email = trim($_POST['email']);
 		
 		$pwd = trim($_POST['pwd']);
@@ -156,8 +158,8 @@ switch($ts){
 			'autologin'=>$autologin,
 			'uptime'=>time(),   //更新登录时间
 		));
-		var_dump( getiJson($userData,$error=0));
-
+		getiJson($userData,$error=0);
+		//echo $userData;
 
 		}
 		
