@@ -169,6 +169,5 @@ switch($ts){
 	case "out":
 		aac('user')->logout();
 		header('Location: '.tsUrl('user','login'));
-		
 		break;
 }

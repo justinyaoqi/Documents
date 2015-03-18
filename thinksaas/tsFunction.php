@@ -1953,7 +1953,7 @@ function getJson($data, $js = 1, $status = 0, $url = '') {
  * @error 0没有错误，1有错误
  */
 function getiJson($data,  $error= 0) {
-	echo json_encode(array('datas'=>array('error'=>$error,'data'=>$data)));
+	echo json_encode(array('error'=>$error,'data'=>$data));
 }
 
 /*

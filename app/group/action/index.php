@@ -3,6 +3,7 @@ defined('IN_TS') or die('Access Denied.');
 
 //获取组分类
 
+
 $arrCate = $new['group']->findAll('group_cate', array(
 	'referid' => '0',
 ));
@@ -71,6 +72,7 @@ foreach ($newTopicFeeds as $key => $item) {
 	$newTopicFeeds[$key]['count_view'] = $item['count_view'];
 	$newTopicFeeds[$key]['count_comment'] = $item['count_comment'];
 }
+
 //print_r($newTopicFeeds);
 
 // 最新4个小组
@@ -90,9 +92,8 @@ foreach ($arrTopics as $key => $item) {
 	$arrTopic[$key]['title'] = tsTitle($item['title']);
 	$arrTopic[$key]['content'] = cututf8(t(tsDecode($item['content'])), 0, 150);
 }
-//echo "<pre>";
-//print_r($arrTopic);
-//echo "</pre>";
+
+
 $title = '小组';
 
 if ($TS_CF['mobile']) {
