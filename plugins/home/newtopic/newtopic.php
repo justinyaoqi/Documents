@@ -11,7 +11,7 @@ function newtopic(){
 	foreach($arrTopics as $key=>$item){
 	
 			$arrTopic[] = $item;
-			$arrTopic[$key]['title']=tsTitle($item['title']);
+			$arrTopic[$key]['title']=tstitle( cututf8 ( t(tsDecode ( $item ['title'] )), 0, 20 ));
 			$arrTopic[$key]['content']=cututf8 ( t(tsDecode ( $item ['content'] )), 0, 120 );
 			$arrTopic[$key]['user'] = aac('user')->getOneUser($item['userid']);
 			$arrTopic[$key]['group'] = aac('group')->getOneGroup($item['groupid']);

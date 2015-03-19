@@ -32,7 +32,7 @@
         </div>
         {if $page == '1'}
         <div class="topic-content">
-            <div class="topic-view">
+            <div class="topic-view bg-danger" style="padding-left:20px;">
                 {$strTopic[content]} {$tpUrl}
             </div>
             {if $TS_USER[user][userid] == $strTopic[userid] || $TS_USER[user][userid]==$strGroup[userid] ||$strGroupUser[isadmin]=="1" || $TS_USER[user][isadmin]=="1"}
@@ -97,14 +97,14 @@
                 </div>
                 <div class="reply-doc">
                     <h4>
-                    <a href="{tsUrl('user','space',array('id'=>$item[user][userid]))}" rel="face" uid="$item[user][userid]" style="">{$item[user][username]}</a>
+                    <a style="color:#222" href="{tsUrl('user','space',array('id'=>$item[user][userid]))}" rel="face" uid="$item[user][userid]" style="">{$item[user][username]}</a>
                     </br>
                     <a style="font-size:12px;color:#666;" href="{tsUrl('user','space',array('id'=>$item[user][userid]))}" rel="face" uid="$item[user][userid]">{$item[user][about]}</a>
                     <i>$item[l]层</i>
                     </h4> {if $item[referid] !='0'}
                     <div class="recomment">
                         <a href="{tsUrl('user','space',array('id'=>$item[recomment][user][userid]))}"><img src="{$item[recomment][user][face]}" width="30" align="absmiddle">
-                            </a> <strong><a href="{tsUrl('user','space',array('id'=>$item[recomment][user][userid]))}" rel="face" uid="$item[recomment][user][userid]">{$item[recomment][user][username]}</a></strong>：{$item[recomment][content]}</div>
+                            </a> <strong><a style="color:#222" href="{tsUrl('user','space',array('id'=>$item[recomment][user][userid]))}" rel="face" uid="$item[recomment][user][userid]">{$item[recomment][user][username]}</a></strong>：{$item[recomment][content]}</div>
                             {/if}
                             <p>
                                 {$item[content]}
@@ -166,19 +166,7 @@
         </div>
     </div>
 </div>
-<div class="bbox">
-    <div class="btitle">推荐帖子</div>
-    <div class="bc">
-        <div class="topic_recommend">
-            <ul>
-                {loop $arrRecommendTopic $key $item}
-                <li><a href="{tsUrl('group','topic',array('id'=>$item['topicid']))}">{$item['title']}</a>
-            </li>
-            {/loop}
-        </ul>
-    </div>
-</div>
-</div>
+
 </div>
 <div class="col-md-4">
 {php doAction('gobad','topic_right_top')}
@@ -188,7 +176,8 @@
     <ul>
         {loop $newTopic $key $item}
         <li>
-            <a href="{tsUrl('group','topic',array('id'=>$item[topicid]))}">{$item[title]}</a>
+            <span class="badge" >{$item['count_view']}</span><span style="width:30px;">&nbsp;&nbsp;</span>
+            <strong><a style="color:#222;font-size:14px;" href="{tsUrl('group','topic',array('id'=>$item[topicid]))}">{$item[title]}</a></strong>
         </li>
         {/loop}
     </ul>

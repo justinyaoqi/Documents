@@ -10,15 +10,15 @@ function recommendgroup(){
 	echo '<div class="bc">';
 	foreach($arrRecommendGroup as $key=>$item){
 	$count_user = $item['count_user'];
-	echo '<div class="sub-item">
+	echo '<div class="sub-item" style="padding:10px 0 10px 0;height:100px;">
 	<div class="pic">
 	<a href="'.tsUrl('group','show',array('id'=>$item[groupid])).'">
 	<img src="'.$item['photo'].'" alt="'.$item['groupname'].'" title="'.$item['groupname'].'" />
 	</a>
 	</div>
 	<div class="info">
-	<a href="'.tsUrl('group','show',array('id'=>$item[groupid])).'">'.$item['groupname'].'</a> ('.$count_user.')             
-	<p>'.cututf8(t($item['groupdesc']),0,50).'</p>
+	<a style="color:#222;" href="'.tsUrl('group','show',array('id'=>$item[groupid])).'">'.$item['groupname'].'</a> ('.$count_user.')             
+	<p class="" style="font-size:12px;line-height:15px;padding-top:5px;min-height:50px;width:300px;color:#888">'.cututf8(t($item['groupdesc']),0,80).'</p>
 	</div>
 	</div>';
 	}

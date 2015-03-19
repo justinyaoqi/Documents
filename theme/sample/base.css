@@ -156,8 +156,14 @@ a{
     text-align: center;
     color: #999
 }
-.footer p {} .softname {
-    font-weight: bold
+.footer p {
+    color: #fff;
+    } .softname {
+    font-weight: bold;
+    color: #fff;
+}
+.footer a {
+    color: #006687;
 }
 .tabnav {
     height: 50px;
@@ -297,7 +303,7 @@ a{
     padding: 10px
 }
 .comment li .reply-doc .recomment p {
-    min-height: 95px;
+   
 }
 .comment li .group_banned {
     text-align: right
@@ -523,7 +529,8 @@ a{
     text-align: center
 }
 .tar {
-    text-align: right
+    text-align: right;
+    height: 20px;
 }
 .bgc {
     background: #fafafa
@@ -912,7 +919,7 @@ a{
 /**/
 .clist ul li {
     border-bottom: 1px dashed #cccccc;
-    border-right: 1px solid red;
+
 }
 .clist ul li img {
     margin: 0px 20px 0 0;
@@ -938,6 +945,7 @@ a{
 }
 .clist ul li .cate {
     color: #999999;
+    font-size: 12px;
 }
 .clist ul li h2{
     font-size: 20;
@@ -977,7 +985,21 @@ a{
 .media-body .userdesc span  a{
     color: #999;
 }
+.media-body h4 a{
+    color: #222;
+    font-size: 14px;
+    font-style: bold;
+}
 .media-body p{
     font-size: 13px;
     color: #222;
+}
+.badge {
+    background-color: #159B48;
+}
+.list-group-item {
+    border-bottom: 2px silver solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }

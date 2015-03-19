@@ -66,8 +66,9 @@ $newTopic = $new['group']->findAll('group_topic',array(
 	'isaudit'=>'0',
 ),'addtime desc',null,10);
 foreach($newTopic as $key=>$item){
-	$newTopic[$key]['title'] = tsTitle($item['title']);
+	$newTopic[$key]['title'] = tstitle( cututf8 ( t(tsDecode ( $item ['title'] )), 0, 22 ));
 	$newTopic[$key]['content'] = tsDecode($item['content']);
+	$newTopic[$key]['count_view']=$item['count_view'];
 }
 
 // 浏览方式

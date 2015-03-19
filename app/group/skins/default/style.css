@@ -5,7 +5,7 @@
 .group_show .title{float:left;margin-left:20px;}
 .group_show .title h3{margin:0;padding:0;}
 .group_show .title p{
-    color:#999;}
+color:#999;}
 .group_show .join{float:left;margin-left:20px;color:#999;}
 /*最新CSS*/
 .mbtl {
@@ -191,8 +191,8 @@ padding: 0 0 30px 00px;
 }
 /*内容页*/
 .topic-content{
-    width: 100%;overflow:hidden;
-    color: #222;
+width: 100%;overflow:hidden;
+color: #222;
 }
 .topic-content .user-face{float: left;height: 48px;overflow: hidden;width: 48px;}
 .topic-content .topic-doc {
@@ -213,10 +213,10 @@ font-size:12px;
 .topic-content .topic-view{font-size:13px;line-height:30px;overflow: hidden;word-wrap: break-word;word-break: normal;}
 .topic-content .topic-view pre{line-height:normal;}
 .topic-content .topic-view p{
-    color: #222;
-    font-size: 13px;
-    line-height: 1.5;
-    word-wrap: break-word;
+color: #222;
+font-size: 13px;
+line-height: 1.5;
+word-wrap: break-word;
 }
 .topic-content .topic-view table{border:#CCCCCC 1px solid;}
 .topic-content .topic-view table td{ border:1px #CCCCCC solid; border-right:none; border-top:none;}
@@ -428,7 +428,6 @@ float: left;
 }
 .titles-b a {
 color: #666;
-
 }
 /*小组分类*/
 .catelist{ margin-bottom: 20px;overflow: hidden;}
@@ -450,8 +449,10 @@ color: #666;
 border-bottom: 1px solid #EEEEEE;
 font-size: 12px;
 padding: 5px;
-text-align: right;}
-.btool a{margin-left:10px;padding:0px;}
+text-align: right;
+
+}
+.btool a{margin-left:10px;padding:0px;color: #999;}
 .bltool{font-size:12px;text-align:left;padding:2px 0;}
 .bltool a{margin-right:10px;padding:0px;}
 .after-view{font-size:14px;}
@@ -470,25 +471,25 @@ color: #999;
 font-size: 12px;
 }
 .comment_count {
-    border-top: 1px solid silver;
-    border-bottom:1px solid silver;
-    height: 40px;
-    line-height: 40px;
+border-top: 1px solid silver;
+border-bottom:1px solid silver;
+height: 40px;
+line-height: 40px;
 }
 .comment_count span {
-    font-size: 14px;
-    font-weight: 700;
+font-size: 14px;
+font-weight: 700;
 }
 .zan_count{
-    width: 45px;
-    float: left;
-    text-align: center;
+width: 45px;
+float: left;
+text-align: center;
 }
 .zan_count button{
-   width: 40px;
-    width: 100%;
-    background-color: silver;
-    font-size: 12px;
-    border: 0;
-    padding: 10px 0;
+width: 40px;
+width: 100%;
+background-color: silver;
+font-size: 12px;
+border: 0;
+padding: 10px 0;
 }

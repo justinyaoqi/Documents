@@ -55,7 +55,7 @@
         {php doAction('pub_header_top')}
     </head>
     <body style="background:#FFFFFF">
-        <nav style="border-bottom:solid 2px red;" class="navbar navbar-red header navbar-fixed-top navbar-inverse" role="navigation">
+        <nav style="border-bottom:solid 2px red;" class="navbar navbar-red header navbar-fixed-top navbar-inverse hidden-xs" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -111,7 +111,7 @@
 </div>
 <!-- /.container-fluid -->
 </nav>
-<div class="headermidder" style="margin-top: 50px;">
+<div class="headermidder hidden-xs" style="margin-top: 50px;">
 <div class="container" style="">
 <div class="row">
 <div class="col-lg-12">
@@ -139,10 +139,10 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" style="margin-top:10px;margin-top: 50px;padding-bottom:10px;">
 <div class="row" style="padding:0;">
 <div class="col-lg-4" >
-<a  href="{SITE_URL}"><img title="{$TS_SITE[base][site_title]}" src="{SITE_URL}uploadfile/logo/{$TS_SITE[base][logo]}" alt="{$TS_SITE[base][site_title]}" width="190" height="40" />
+<a  href="{SITE_URL}"><img title="{$TS_SITE[base][site_title]}" src="{SITE_URL}uploadfile/logo/{$TS_SITE[base][logo]}" alt="{$TS_SITE[base][site_title]}" width="190" height="60" />
 </a>
 </div>
 <div class="col-lg-4">
@@ -154,7 +154,7 @@
 </div>
 </div>
 </div>
-<div class="appnav appnavheader" style="height:40px;margin-top:10px;">
+<div class="appnav appnavheader" style="height:40px;">
 <div class="container" >
 <ul>
 {loop $TS_SITE[appnav] $key $item} {if $key=='home'}
