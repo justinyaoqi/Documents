@@ -3,6 +3,14 @@ defined('IN_TS') or die('Access Denied.');
 
 //获取组分类
 
+$arrRecommendGroup = $new['group']->getRecommendGroup('2');
+foreach($arrRecommendGroup as $key=>$item){
+	$arrRecommendGroups = [];
+	$arrRecommendGroups[$key]["groupname"] = $item["groupname"];
+	$arrRecommendGroups[$key]["count_user"] = $item['count_user'];
+	$arrRecommendGroups[$key]["groupdesc"] =cututf8(t(tsDecode($item['groupdesc'])), 0, 10);
+	$arrRecommendGroups[$key]["photo"] =$item['photo'];
+}
 
 $arrCate = $new['group']->findAll('group_cate', array(
 	'referid' => '0',
