@@ -148,6 +148,8 @@ switch($ts){
 			//对积分进行处理
 			aac('user')->doScore($app,$ac,$ts);
 		}
+
+		
 		
 		//更新登录时间，用作自动登录
 		$autologin = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);

@@ -4,6 +4,14 @@ defined('IN_TS') or die('Access Denied.');
 $userid = aac('user')->isLogin();
 switch($ts){
 	//手机端调用接口
+	case 'ilist':
+		$topicid = intval($_GET['id']);
+
+		$strTopic = $new['group']->find('group_topic',array(
+							'topicid'=>$topicid,
+		));
+		getiJson($strTopic,$error=0);
+		break;
 	case "ido":
 		//过滤内容开始
 		if($TS_USER['user']['isadmin']==0){
